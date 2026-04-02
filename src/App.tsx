@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Link, Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import AboutPage from "@/pages/About";
 import ContactPage from "@/pages/Contact";
@@ -25,12 +25,12 @@ function NotFoundPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">404</p>
         <h1 className="mt-3 text-4xl font-bold text-slate-900">Halaman tidak ditemukan</h1>
         <p className="mt-4 text-slate-600">Tautan mungkin sudah berubah atau halaman belum tersedia.</p>
-        <a
-          href="/"
+        <Link
+          to="/"
           className="mt-6 inline-flex rounded-md bg-primary px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
         >
           Kembali ke Beranda
-        </a>
+        </Link>
       </div>
     </main>
   );
@@ -38,7 +38,7 @@ function NotFoundPage() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Routes>
         <Route
