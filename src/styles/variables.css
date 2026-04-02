@@ -1,0 +1,13 @@
+:root {
+  --color-primary: #1e40af;
+  --color-secondary: #059669;
+  --color-accent: #f59e0b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-50: #f8fafc;
+
+  --space-section-y: 4rem;
+  --space-section-y-lg: 6rem;
+
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-strong: 0 20px 45px rgba(15, 23, 42, 0.14);
+}
