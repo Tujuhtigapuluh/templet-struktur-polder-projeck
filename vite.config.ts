@@ -1,3 +1,4 @@
+
 import path from "path";
 import { fileURLToPath } from "url";
 import tailwindcss from "@tailwindcss/vite";
@@ -10,6 +11,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './', // Menghindari masalah blank putih di GitHub Pages
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
